@@ -53,6 +53,12 @@ fields: [
         type: 'image',
         
       },
+    {
+        name: 'category',
+        title: 'category',
+        type: 'string',
+        
+      },
 ]
 
 }

@@ -14,7 +14,7 @@ export default function Promotions() {
                         <h3 className=' text-3xl  mt-5 md:text-4xl font-semibold font-[sans-serif]  '>GET UP TO 60%</h3>
                         <h3 className='text-xl'>For the summer season</h3>
                     </div>
-                    <Image src={'/images/promo1.webp'} alt={'promotions'} width={250} height={250}/>
+                    <Image src={'/images/promo1.jpg'} alt={'promotions'} width={250} height={250}/>
                 </div>
 
                 <div className='sm:row-span-2 bg-[#efe1c7] h-auto'>
@@ -24,7 +24,7 @@ export default function Promotions() {
                         <p className='font-bold  text-lg m-2'>$75.00</p>
                     </div>
 
-                    <Image src={'/images/promo2.webp'} alt='promotions' height={400} width={260} className='mx-auto bottom-0'/>
+                    <Image src={'/images/promo2.jpg'} alt='promotions' height={400} width={260} className='mx-auto bottom-0'/>
  
                 </div>
 
@@ -36,7 +36,7 @@ export default function Promotions() {
                         <p className='font-bold  text-lg m-2'>$190.00</p>
                     </div>
 
-                    <Image src={'/images/promo3.webp'} alt='promotions' height={400} width={260} className='mx-auto bottom-0'/>
+                    <Image src={'/images/promo3.jpg'} alt='promotions' height={400} width={260} className='mx-auto bottom-0'/>
 
                 </div>
 

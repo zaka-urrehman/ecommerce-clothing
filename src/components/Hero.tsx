@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import { ShoppingCart } from 'lucide-react'
 
+
 const Hero = () => {
     
     return (
@@ -20,10 +21,10 @@ const Hero = () => {
 
                 <div className='grid grid-cols-2 md:grid-cols-4 justify-around lg:justify-between mt-10 lg:mt-32 gap-4 '>
 
-                    <Image src={'/icons/1.webp'} alt='logos' height={80} width={100}/>
-                    <Image src={'/icons/2.webp'} alt='logos' height={80} width={100}/>
-                    <Image src={'/icons/3.webp'} alt='logos' height={80} width={100}/>
-                    <Image src={'/icons/4.webp'} alt='logos' height={80} width={100}/>
+                    <Image src={'/icons/1.png'} alt='logos' height={80} width={100}/>
+                    <Image src={'/icons/2.png'} alt='logos' height={80} width={100}/>
+                    <Image src={'/icons/3.png'} alt='logos' height={80} width={100}/>
+                    <Image src={'/icons/4.png'} alt='logos' height={80} width={100}/>
                     
                 </div>
             </div>
@@ -33,7 +34,7 @@ const Hero = () => {
             <div className='hidden lg:flex justify-center relative'>
                 <div className='bg-[#ffece3] rounded-full h-[600px] w-[600px] flex flex-shrink-0 object-contain '></div>
                 <Image
-                    src={'/images/hero.webp'} alt='Hero Section Image'
+                    src={'/images/hero.jpg'} alt='Hero Section Image'
                     height={650} width={650}
                     className='absolute -top-10 h-[650px] w-[650px] flex flex-shrink-0 object-cover ' />
             </div>

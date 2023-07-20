@@ -1,7 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react';
 import { client } from '@/lib/sanityClient';
-import { Image as IImage } from 'sanity';
+import { Image as IImage, Slug as ISlug} from 'sanity';
 import Image from 'next/image';
 import { urlForImage } from '../../../sanity/lib/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -19,13 +19,14 @@ export const getProductData = async () => {
 
 interface IData {
   title: string;
+  slug: ISlug,
   Description: string;
   price: number;
   image: IImage;
   _id: string;
 }
 
-export default function ProductSlider() {
+export default  function ProductSlider() {
   const [data, setData] = useState<IData[]>([]);
 
   useEffect(() => {
@@ -35,9 +36,10 @@ export default function ProductSlider() {
     };
     fetchData();
   }, []);
+// const data :IData[] = await getProductData();
 
   return (
-    <div className='pb-8'>
+    <div className='mb-10 lg:max-h-[700px] max-h-[530px]'>
       <Swiper
         breakpoints={{
           300: {
@@ -58,19 +60,22 @@ export default function ProductSlider() {
 
       >
         {data.map((item) => (
-          <SwiperSlide key={item._id} className=''>
-            <div className='hover:scale-110 duration-500 flex flex-col justify-center items-center mt-5'>
+          <SwiperSlide key={item._id}>
+            <div className='hover:scale-110 duration-500 flex flex-col justify-center items-center mt-5 mb-10'>
 
-              <Link href={'/'}>
+              <Link key={item._id} href={`/productDetails/${item.slug.current}`}>
                 <Image
                   src={urlForImage(item.image).url()}
                   alt='slider Image'
                   width={370}
-                  height={600}
+                  height={450}
                   className="mb-2"
                 />
                 <h2 className='font-bold text-center'>{item.title}</h2>
-                <h2 className='font-bold text-center'>{item.price}</h2>
+                
+                <h2 className='font-bold text-center '>{item.price}</h2>
+
+              
               </Link>
             </div>
           </SwiperSlide>

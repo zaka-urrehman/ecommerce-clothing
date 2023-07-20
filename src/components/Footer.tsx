@@ -14,7 +14,7 @@ const Footer = () => {
 
             <div className='lg:grid lg:grid-cols-[37%,21%,21%,21%] mb-14'>
                 <div className=' space-y-10 my-10'>
-                    <Image src={'/icons/Logo.webp'} alt='Logo' width={150} height={100} className='w-40 h-6.5' />
+                    <Image src={'/icons/Logo.png'} alt='Logo' width={150} height={100} className='w-40 h-6.5' />
                     <p className='text-gray-600 lg:mr-20'> Small, artisan label that offers a thoughtfully curated collection of high quality everyday essentials made.</p>
 
                     <div className='flex gap-x-4'>
