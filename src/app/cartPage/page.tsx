@@ -2,11 +2,13 @@
 import Image from 'next/image'
 import { useSelector, useDispatch } from 'react-redux'
 import { urlForImage } from '../../../sanity/lib/image'
-import { getCartTotal ,remove, fetchDbData } from '@/redux/features/cartSlice'
+import { getCartTotal, remove, fetchDbData } from '@/redux/features/cartSlice'
 import { Trash2 } from 'lucide-react'
 import { Toaster, toast } from "react-hot-toast";
-import { useAuth } from '@clerk/nextjs'
+import { clerkClient, useAuth } from '@clerk/nextjs'
 import { useEffect } from 'react'
+import CheckOut from '@/components/sharred/checkOut'
+import { SignedIn } from '@clerk/nextjs'
 
 
 const CartPage = () => {
@@ -91,8 +93,11 @@ const CartPage = () => {
                     <h3 className=''>{totalQuantity} items</h3>
                     <h3 className='text-lg'>Sub Total</h3>
                     <h3>${totalAmount}</h3>
-                    <button className='col-span-2 mt-6 bg-black text-white px-4 py-2'>Proceed to Checkout</button>
-
+                  <SignedIn> 
+                    <div className='col-span-2'>
+                        <CheckOut items={cart}/>
+                    </div>
+                 </SignedIn> 
                 </div>
 
             </div>

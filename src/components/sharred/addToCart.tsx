@@ -98,10 +98,14 @@ const AddToCart = ({ product }: any) => {
 
     const handleCart = async (product: any) => {
 
-
+        toast.promise(setCartInDb(), {
+            loading: "Adding To Cart",
+            success: "Product added To Cart",
+            error: "Failed to Add Product to cart",
+          });
         dispatch(add(product))
-        setCartInDb();
-        toast.success('Added to Cart!');
+        
+        // toast.success('Added to Cart!');
      
     }
 

@@ -18,7 +18,7 @@ export const Cart = () => {
     return (
         <div className='flex flex-col lg:flex-row items-center gap-x-2 gap-y-2'>
             <SignedOut>
-                <Link href={'/sign-in'}><div className='w-12 h-12 text-sm rounded-full bg-gray-100 active:bg-gray-300 flex items-center justify-center'>Login</div></Link>
+                <Link href={'/sign-in'}><div  className='w-12 h-12 text-sm rounded-full bg-gray-100 active:bg-gray-300 flex items-center justify-center'>Login</div></Link>
             </SignedOut>
             <SignedIn>  <UserButton afterSignOutUrl="/"/></SignedIn>
 
@@ -77,11 +77,11 @@ export default function MobNav() {
 
                     <div className='w-32 mx-auto mt-32'>
                         <ul className='list-none flex flex-col justify-center items-center gap-3'>
-                            <li><Cart /></li>
-                            <Link href={'/category/female'}><li className='text-base'>Female</li></Link>
-                            <Link href={'/category/male'}><li className='text-base'>Male</li></Link>
-                            <Link href={'/category/kids'}> <li className='text-base'>Kids</li></Link>
-                            <Link href={'/allProducts'}><li className='text-base'>All Products</li></Link>
+                            <li ><Cart  /></li>
+                            <Link href={'/category/female'}><li onClick={handleNav} className='text-base'>Female</li></Link>
+                            <Link href={'/category/male'}><li onClick={handleNav} className='text-base'>Male</li></Link>
+                            <Link href={'/category/kids'}> <li onClick={handleNav} className='text-base'>Kids</li></Link>
+                            <Link href={'/allProducts'}><li onClick={handleNav} className='text-base'>All Products</li></Link>
                         </ul>
                     </div>
 

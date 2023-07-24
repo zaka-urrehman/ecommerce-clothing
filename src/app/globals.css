@@ -8,3 +8,26 @@
 .mr {
     margin-right: 0%;
 }
+
+
+
+@keyframes tick {
+    0% {
+      stroke-dashoffset: 48;
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+  }
+  
+  .animate-tick {
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: tick 3s ease-in-out forwards;
+  }
+  
